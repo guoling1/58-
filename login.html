@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>会员登录_邯郸站_58同铺</title>
+<meta http-equiv="mobile-agent" content="format=html5;url=http://www.58tongpu.com/mobile/member/login.php">
+<meta name="generator" content="DESTOON B2B - www.destoon.com"/>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+<link rel="archives" title="58同铺" href="http://www.58tongpu.com/archiver/"/>
+<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="static/css/member.css"/>
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="static/css/ie6.css"/>
+<![endif]-->
+<script type="text/javascript">window.onerror=function(){return true;}</script><script type="text/javascript" src="static/js/lang.js"></script>
+<script type="text/javascript" src="static/js/config.js"></script>
+<!--[if lte IE 9]><!-->
+<script type="text/javascript" src="static/js/jquery-1.5.2.min.js"></script>
+<!--<![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/page.js"></script>
+<script type="text/javascript">
+var searchid = 25;
+</script>
+</head>
+<body>
+<div class="head" id="head">
+<div class="head_m">
+<div class="head_r" id="destoon_member"></div>
+<div class="head_l">
+<ul>
+<li class="h_location"><a href="http://www.58tongpu.com/api/city.php" title="点击切换城市"><span id="destoon_city">邯郸</span></a></li><li class="h_fav"><script type="text/javascript">addFav('收藏本页');</script></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="m"><div id="search_tips" style="display:none;"></div></div>
+<div id="destoon_qrcode" style="display:none;"></div><div class="m">
+<div id="search_module" style="display:none;" onMouseOut="Dh('search_module');" onMouseOver="Ds('search_module');">
+<ul>
+<li onClick="setModule('25','生意转让')">生意转让</li></ul>
+</div>
+</div>
+<div class="m" id="ehfhgkkdgdhs">
+<div class="head_zj">
+<div class="logo f_l"><a href="http://www.58tongpu.com/"><img src="static/picture/161458341.png" alt="58同铺"/></a></div>
+<form id="destoon_search" action="http://www.58tongpu.com/Business/search.php" onSubmit="return Dsearch(1);">
+<input type="hidden" name="moduleid" value="25" id="destoon_moduleid"/>
+<input type="hidden" name="spread" value="0" id="destoon_spread"/>
+<div class="head_search">
+<div>
+<input name="kw" id="destoon_kw" type="text" class="search_i" value="请输入关键词" onFocus="if(this.value=='请输入关键词') this.value='';" onKeyUp="STip(this.value);" autocomplete="off" x-webkit-speech speech/><input type="text" id="destoon_select" class="search_m" value="生意转让" readonly onFocus="this.blur();" onClick="$('#search_module').fadeIn('fast');"/><input type="submit" value=" " class="search_s"/>
+</div>
+</div>
+</form>
+<div class="head_search_kw f_l"><a href="javascript:;" onclick="toAdd()" target="_blank">免费发布</a></div>
+    </div>
+</div>
+<script type="text/javascript"><!--事件一-->
+function toAdd() {
+    if(localStorage.getItem('user58')){
+        window.location.href='list.html'
+    }else {
+        window.location.href='login.html'
+    }
+}
+function wueyhfhjdg(obj,type,fn){ 
+    if(obj.attachEvent){
+        obj.attachEvent('on'+type,function(){
+            fn.call(obj);
+        })
+    }else{
+        obj.addEventListener(type,fn,false);
+    }
+}
+wueyhfhjdg(window,'scroll',function(){
+var tymnc = document.documentElement.scrollTop || document.body.scrollTop;
+    var mydiv = document.getElementById("ehfhgkkdgdhs");
+if (tymnc >= 150) {
+mydiv.style.position ="fixed";
+mydiv.style.width ="100%";
+mydiv.style.background ="rgba(255,85,46,.9)";
+mydiv.style.top ="0px";
+}
+else {
+mydiv.style.position ="inherit";
+mydiv.style.width ="1200px";
+mydiv.style.background ="#ffffff";
+}
+});  
+</script>
+<div class="m b20" id="headb"></div><div class="m" style="padding:32px 0;">
+<div class="login-show">&nbsp;</div>
+<div class="login-main">
+<div id="msgs"></div>
+<div class="login-head">
+<ul>
+<li class="on"><a href="?action=login&forward=http%3A%2F%2Fwww.58tongpu.com%2F">帐号登录</a></li>
+</ul>
+</div>
+<div class="login-body">
+<form method="post" action="javascript:;" onsubmit="return Dcheck();">
+<input type="hidden" name="forward" value="http://www.58tongpu.com/"/>
+<input type="hidden" name="action" value="login"/>
+<input type="hidden" name="auth" value=""/>
+<div><input name="username" type="text" id="username" value="" placeholder="用户名/Email/已认证手机" class="input-user"/></div>
+<div><input name="password" type="password" id="password" value="" placeholder="密码"  class="input-pass"/></div>
+<div><input type="submit" name="submit" value="登 录" class="btn-blue login-btn"/></div>
+<div class="t_c f_gray"><a href="register.html" class="b">会员注册</a> &nbsp;|&nbsp; <a href="javascript:;" class="b" onclick="forget()">忘记密码</a></div>
+</form>
+</div>
+</div>
+<div class="login-show">&nbsp;</div>
+<div class="c_b"></div>
+</div>
+<script type="text/javascript">
+    function forget(){
+        alert("请联系管理管")
+    }
+function Dmsgs(msg) {
+$('#msgs').html(msg);
+$('#msgs').fadeIn(100, function() {
+setTimeout(function() {$('#msgs').fadeOut(300);}, 3000);
+});
+}
+function Dcheck() {
+if(Dd('username').value.length < 2) {
+Dmsgs('请输入登录名称');
+Dd('username').focus();
+return false;
+}
+if(Dd('password').value.length < 6) {
+Dmsgs('请输入密码');
+Dd('password').focus();
+return false;
+}
+    registPost();
+    event.preventDefault()
+}
+//调用
+function registPost () {     
+   $.ajax({
+       type: "post",
+       url: "http://ceshi.hdjincheng.cn/ShangPu/UserLogin",
+       data:{
+            username:$('#username').val(),
+            password:$('#password').val()
+       },
+   }).success(function(data) {
+       localStorage.setItem('user58',JSON.parse(data).user_id)
+     window.location.href='list.html';
+   });
+    /*
+     或者用jquery.form.min.js提交
+     $('#registSubmit').ajaxSubmit(function(message){
+        console.log(message);
+     })
+     */
+}
+function Scheck() {
+if(Dd('mobile').value.length < 11) {
+Dmsgs('请输入手机号码');
+Dd('mobile').focus();
+return false;
+}
+if(Dd('code').value.length < 6) {
+Dmsgs('请输入短信验证码');
+Dd('code').focus();
+return false;
+}
+return true;
+}
+function Dstop() {
+var i = 180;
+var interval=window.setInterval(
+function() {
+if(i == 0) {
+$('#send').html('发送短信');
+clearInterval(interval);
+} else {
+$('#send').html('重新发送('+i+'秒)');
+i--;
+}
+},
+1000);
+}
+function Dsend() {
+if($('#send').html().indexOf('秒') != -1) {
+Dmsgs('请耐心等待');
+return false;
+}
+if(Dd('mobile').value.length < 11) {
+Dmsgs('请输入手机号码');
+Dd('mobile').focus();
+return false;
+}
+if($('#ccaptcha').html().indexOf('ok.png') == -1) {
+Dmsgs('验证码填写错误');
+Dd('captcha').focus();
+return false;
+}
+$.post('?', 'action=send&mobile='+Dd('mobile').value+'&captcha='+Dd('captcha').value, function(data) {
+if(data == 'ok') {
+Dmsgs('短信发送成功');
+Dstop();return;
+} else if(data == 'format') {
+Dmsgs('手机格式错误');
+} else if(data == 'captcha') {
+Dmsgs('验证码错误');
+} else if(data == 'exist') {
+Dmsgs('号码不存在或未验证');
+} else if(data == 'max') {
+Dmsgs('发送次数过多');
+} else if(data == 'fast') {
+Dmsgs('发送频率过快');
+} else {
+Dmsgs('发送失败'+data);
+}
+reloadcaptcha();
+});
+}
+</script>
+<div class="m b20" id="footb"></div>
+<div class="flink"><!--友情链接-->
+<div class="flink-nr">
+                                               友情链接：
+                                <a href="http://www.58tongpu.com" target="_blank">58同铺</a>
+                    </div>
+</div>
+<div class="m">
+<div class="foot">
+<div id="copyright">(c)2008-2018 58同铺 SYSTEM All Rights Reserved</div>
+</div>
+</div>
+<div class="back2top"><a href="javascript:void(0);" title="返回顶部">&nbsp;</a></div>
+<script type="text/javascript">
+var destoon_userid = 0,destoon_username = '',destoon_message = 0,destoon_chat = 0,destoon_cart = get_cart(),destoon_member = destoon_guest = '';
+destoon_guest = '<img src="static/picture/ico-user.png" align="absmiddle"/><a href="http://www.58tongpu.com/member/login.php">会员登录</a> &nbsp;|&nbsp; <a href="register.html">免费注册</a> &nbsp;|&nbsp; <a href="http://www.58tongpu.com/member/send.php">忘记密码</a>';
+destoon_member += destoon_guest;
+$('#destoon_member').html(destoon_member);
+$('#destoon_city').html('邯郸');
+$('#destoon_cart').html(destoon_cart > 0 ? '<strong>'+destoon_cart+'</strong>' : 0);
+</script>
+</body>
+</html>

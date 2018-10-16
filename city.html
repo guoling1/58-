@@ -1,0 +1,479 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>切换城市_邯郸站_58同铺</title>
+    <meta http-equiv="mobile-agent" content="format=html5;url=http://www.58tongpu.com/mobile/api/city.php">
+    <meta name="generator" content="DESTOON B2B - www.destoon.com"/>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="bookmark" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="archives" title="58同铺" href="http://www.58tongpu.com/archiver/"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="static/css/ie6.css"/>
+    <![endif]-->
+    <script type="text/javascript">window.onerror = function () {
+        return true;
+    }</script>
+    <script type="text/javascript" src="static/js/lang.js"></script>
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!--[if lte IE 9]><!-->
+    <script type="text/javascript" src="static/js/jquery-1.5.2.min.js"></script>
+    <!--<![endif]-->
+    <!--[if (gte IE 10)|!(IE)]><!-->
+    <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/page.js"></script>
+    <script type="text/javascript">
+        var searchid = 25;
+    </script>
+</head>
+<body>
+
+
+<div class="head" id="head">
+    <div class="head_m">
+        <div class="head_r" id="destoon_member"></div>
+        <div class="head_l">
+            <ul>
+                <li class="h_location"><a href="city.html" title="点击切换城市"><span
+                        id="destoon_city">邯郸</span></a></li>
+                <li class="h_fav">
+                    <script type="text/javascript">addFav('收藏本页');</script>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m">
+    <div id="search_tips" style="display:none;"></div>
+</div>
+<div id="destoon_qrcode" style="display:none;"></div>
+<div class="m">
+    <div id="search_module" style="display:none;" onMouseOut="Dh('search_module');" onMouseOver="Ds('search_module');">
+        <ul>
+            <li onClick="setModule('25','生意转让')">生意转让</li>
+        </ul>
+    </div>
+</div>
+<div class="m" id="ehfhgkkdgdhs">
+    <div class="head_zj">
+        <div class="logo f_l"><a href="http://www.58tongpu.com/"><img src="static/picture/161458341.png"
+                                                                      alt="58同铺"/></a></div>
+        <form id="destoon_search" action="http://www.58tongpu.com/Business/search.php" onSubmit="return Dsearch(1);">
+            <input type="hidden" name="moduleid" value="25" id="destoon_moduleid"/>
+            <input type="hidden" name="spread" value="0" id="destoon_spread"/>
+            <div class="head_search">
+                <div>
+                    <input name="kw" id="destoon_kw" type="text" class="search_i" value="请输入关键词"
+                           onFocus="if(this.value=='请输入关键词') this.value='';" onKeyUp="STip(this.value);"
+                           autocomplete="off" x-webkit-speech speech/><input type="text" id="destoon_select"
+                                                                             class="search_m" value="生意转让" readonly
+                                                                             onFocus="this.blur();"
+                                                                             onClick="$('#search_module').fadeIn('fast');"/><input
+                        type="submit" value=" " class="search_s"/>
+                </div>
+            </div>
+        </form>
+        <div class="head_search_kw f_l"><a href="javascript:;" onclick="toAdd()" target="_blank">免费发布</a></div>
+    </div>
+</div>
+<!--获取定位-->
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript"><!--事件一-->
+console.log(returnCitySN.cname)
+$('#destoon_city').html(returnCitySN.cname);
+function toAdd() {
+    if(localStorage.getItem('user58')){
+        window.location.href='list.html'
+    }else {
+        window.location.href='login.html'
+    }
+}
+function wueyhfhjdg(obj, type, fn) {
+    if (obj.attachEvent) {
+        obj.attachEvent('on' + type, function () {
+            fn.call(obj);
+        })
+    } else {
+        obj.addEventListener(type, fn, false);
+    }
+}
+
+wueyhfhjdg(window, 'scroll', function () {
+    var tymnc = document.documentElement.scrollTop || document.body.scrollTop;
+    var mydiv = document.getElementById("ehfhgkkdgdhs");
+    if (tymnc >= 150) {
+        mydiv.style.position = "fixed";
+        mydiv.style.width = "100%";
+        mydiv.style.background = "rgba(255,85,46,.9)";
+        mydiv.style.top = "0px";
+    }
+    else {
+        mydiv.style.position = "inherit";
+        mydiv.style.width = "1200px";
+        mydiv.style.background = "#ffffff";
+    }
+});
+</script>
+<div class="m b20" id="headb"></div>
+<style type="text/css">.cli {
+    float: left;
+    /*width: 60px;*/
+    padding: 0 0 0 10px;
+    font-size: 14px;
+}</style>
+<script type="text/javascript">
+    function gocity(s) {
+        Go('index.html?action=go&' + s);
+    }
+</script>
+<div class="m">
+    <table cellpadding="12" cellspacing="0" class="tb">
+        <!--<tr>
+            <th width="58">&nbsp;</th>
+            <th class="t_l px14">
+                <span class="f_r"><a href="javascript:gocity('auto=1');" title="智能选择" class="b">[智能]</a>&nbsp;</span>
+                &nbsp;&nbsp;<a href="javascript:gocity('');">全国</a>
+            </th>
+        </tr>-->
+        <tr>
+            <td class="f_b t_c px14" style="width: 50px">热门</td>
+            <td>
+                <ul id="0">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">A</td>
+            <td>
+                <ul id="a">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">B</td>
+            <td>
+                <ul id="b">
+                    <!--<li id="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">C</td>
+            <td>
+                <ul id="c">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">D</td>
+            <td>
+                <ul id="d">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">E</td>
+            <td>
+                <ul id="e">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">F</td>
+            <td>
+                <ul id="f">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">G</td>
+            <td>
+                <ul id="g">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">H</td>
+            <td>
+                <ul id="h">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">I</td>
+            <td>
+                <ul id="i">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">J</td>
+            <td>
+                <ul id="j">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">K</td>
+            <td>
+                <ul id="k">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">L</td>
+            <td>
+                <ul id="l">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">M</td>
+            <td>
+                <ul id="m">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">N</td>
+            <td>
+                <ul id="n">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">O</td>
+            <td>
+                <ul id="o">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">P</td>
+            <td>
+                <ul id="p">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">Q</td>
+            <td>
+                <ul id="q">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">R</td>
+            <td>
+                <ul id="r">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">S</td>
+            <td>
+                <ul id="s">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">T</td>
+            <td>
+                <ul id="t">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">U</td>
+            <td>
+                <ul id="u">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">V</td>
+            <td>
+                <ul id="v">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">W</td>
+            <td>
+                <ul id="w">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">X</td>
+            <td>
+                <ul id="x">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">Y</td>
+            <td>
+                <ul id="y">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="f_b t_c px14">Z</td>
+            <td>
+                <ul id="z">
+                    <!--<li class="cli"><a href="javascript:gocity('areaid=保定');">保定</a></li>-->
+                </ul>
+                <div class="c_b"></div>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<script>
+    var list_citya,list_cityb,list_cityc,list_cityd,list_citye,list_cityf,list_cityg,list_cityh,list_cityi,list_cityj,list_cityk,list_cityl,list_citym,list_cityn,list_cityo,list_cityp,list_cityq,list_cityr,list_citys,list_cityt,list_cityu,list_cityv,list_cityw,list_cityx,list_cityy,list_cityz
+
+    $.ajax({
+        url: 'http://ceshi.hdjincheng.cn/ShangPu/CityList',
+        type: 'get',
+        dataType: "json",
+        data: {},
+        success:function (data) {
+            var list = ['0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+            for(var i=0;i<list.length;i++){
+                console.log(i)
+                document.getElementById(list[i]).innerHTML=""
+                if(data['list_city'+list[i]].length==0){
+                    document.getElementById(list[i]).parentNode.parentNode.style.display='none'
+                }else {
+                    for (var j=0;j<data['list_city'+list[i]].length;j++){
+                        document.getElementById(list[i]).innerHTML+="<li class=\"cli\"><a href=\"javascript:gocity('areaid="+data['list_city'+list[i]][j].title+"');\">"+data['list_city'+list[i]][j].title+"</a></li>"
+                    }
+                }
+            }
+            list_citya=data.list_citya;
+            list_cityb=data.list_cityb;
+            list_cityc=data.list_cityc;
+            list_cityd=data.list_cityd;
+            list_citye=data.list_citye;
+            list_cityf=data.list_cityf;
+            list_cityg=data.list_cityg;
+            list_cityh=data.list_cityh;
+            list_cityi=data.list_cityi;
+            list_cityj=data.list_cityj;
+            list_cityk=data.list_cityk;
+            list_cityl=data.list_cityl;
+            list_citym=data.list_citym;
+            list_cityn=data.list_cityn;
+            list_cityo=data.list_cityo;
+            list_cityp=data.list_cityp;
+            list_cityq=data.list_cityq;
+            list_cityr=data.list_cityr;
+            list_citys=data.list_citys;
+            list_cityt=data.list_cityt;
+            list_cityu=data.list_cityu;
+            list_cityv=data.list_cityv;
+            list_cityw=data.list_cityw;
+            list_cityx=data.list_cityx;
+            list_cityy=data.list_cityy;
+            list_cityz=data.list_cityz;
+            /*document.getElementsByClassName('a')[0].innerHTML=""
+            for (var i=0;i<data.list_citya.length;i++){
+                document.getElementsByClassName('a')[0].innerHTML+="<li class=\"cli\"><a href=\"javascript:gocity('areaid=保定');\">"+data.list_citya[i].title+"</a></li>"
+            }
+            document.getElementsByClassName('b')[0].innerHTML=""
+            for (var j=0;j<data.list_cityb.length;j++){
+                document.getElementsByClassName('b')[0].innerHTML+="<li class=\"cli\"><a href=\"javascript:gocity('areaid=保定');\">"+data.list_cityb[j].title+"</a></li>"
+            }
+            document.getElementsByClassName('c')[0].innerHTML=""
+            for (var k=0;k<data.list_cityc.length;k++){
+                console.log(k)
+                document.getElementsByClassName('c')[0].innerHTML+="<li class=\"cli\"><a href=\"javascript:gocity('areaid=保定');\">"+data.list_cityc[k].title+"</a></li>"
+            }
+            document.getElementsByClassName('c')[0].innerHTML=""
+            for (var k=0;k<data.list_cityc.length;k++){
+                console.log(k)
+                document.getElementsByClassName('c')[0].innerHTML+="<li class=\"cli\"><a href=\"javascript:gocity('areaid=保定');\">"+data.list_cityc[k].title+"</a></li>"
+            }*/
+        }
+    })
+</script>
+<div class="m b20" id="footb"></div>
+<div class="flink"><!--友情链接-->
+    <div class="flink-nr">
+        友情链接：
+        <a href="http://www.58tongpu.com" target="_blank">58同铺</a>
+    </div>
+</div>
+<div class="m">
+    <div class="foot">
+        <div id="copyright">(c)2008-2018 58同铺 SYSTEM All Rights Reserved</div>
+    </div>
+</div>
+<div class="back2top"><a href="javascript:void(0);" title="返回顶部">&nbsp;</a></div>
+
+<script type="text/javascript">
+    var destoon_userid = 0, destoon_username = '', destoon_message = 0, destoon_chat = 0, destoon_cart = get_cart(),
+        destoon_member = destoon_guest = '';
+    destoon_guest = '<img src="static/picture/ico-user.png" align="absmiddle"/><a href="login.html">会员登录</a> &nbsp;|&nbsp; <a href="register.html">免费注册</a> &nbsp;|&nbsp; <a href="http://www.58tongpu.com/member/send.php">忘记密码</a>';
+    destoon_member += destoon_guest;
+    $('#destoon_member').html(destoon_member);
+    // $('#destoon_city').html('邯郸');
+    $('#destoon_cart').html(destoon_cart > 0 ? '<strong>' + destoon_cart + '</strong>' : 0);
+</script>
+</body>
+</html>

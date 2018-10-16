@@ -1,0 +1,1 @@
+var DTPath = "http://www.58tongpu.com/";var DTMob = "http://www.58tongpu.com/mobile/";var SKPath = "http://www.58tongpu.com/skin/default/";var MEPath = "http://www.58tongpu.com/member/";var DTEditor = "fckeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "cwx_";

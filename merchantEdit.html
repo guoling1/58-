@@ -1,0 +1,932 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="robots" content="nofollow"/>
+    <meta name="generator" content="DESTOON B2B - www.destoon.com"/>
+    <meta http-equiv="x-ua-compatible" content="IE=8"/>
+    <title>商铺列表_商务中心_邯郸站_58同铺_</title>
+    <link rel="shortcut icon" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="bookmark" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style_1.css"/>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="static/css/ie6_1.css"/>
+    <script type="text/javascript" src="static/js/ie6png.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <!--[if IE]>
+    <style type="text/css">
+        .head_user em {
+            margin: -4px 0 0 -4px;
+        }
+
+        #mini_profile {
+            margin: 20px 0 0 -140px;
+        }
+    </style>
+    <![endif]-->
+    <script type="text/javascript">window.onerror = function () {
+        return true;
+    }</script>
+    <script type="text/javascript" src="static/js/lang_1.js"></script>
+    <script type="text/javascript" src="static/js/config_2.js"></script>
+    <!--[if lte IE 9]><!-->
+    <script type="text/javascript" src="static/js/jquery-1.5.2.min_1.js"></script>
+    <!--<![endif]-->
+    <!--[if (gte IE 10)|!(IE)]><!-->
+    <script type="text/javascript" src="static/js/jquery-2.1.1.min_1.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="static/js/common_1.js"></script>
+    <script type="text/javascript" src='static/js/formdata.js'></script>
+    <script type="text/javascript" src="static/js/admin.js"></script>
+    <script type="text/javascript" src="static/js/member.js"></script>
+    <style>
+        .btn1{
+            margin: 3px 0;background: green;color: #fff;line-height: 22px;cursor: pointer;border-radius: 3px
+        }
+        .btn2{
+            margin: 3px 0;background: red;color: #fff;line-height: 22px;cursor: pointer;border-radius: 3px
+        }
+    </style>
+    <style>
+        .mask{
+            display: none;
+            position: absolute;
+            background: #fff;
+            z-index: 111;
+            border: 1px solid #ccc;
+            width: 172px;
+            min-height: 300px;
+        }
+        .mask input{
+            font-size: 12px;
+            padding: 4px;
+        }
+        .mask li{
+            float: none;
+            margin: 0;
+            text-align: center;
+            line-height: 20px;
+            /*display: block;*/
+        }
+        .mask li:hover{
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div id="msgbox" style="display:none;"></div>
+<div class="head" id="head">
+    <div class="head_m">
+        <div class="head_logo"><a href="http://www.58tongpu.com/member/"><img src="static/picture/logo.png"/></a></div>
+        <div class="head_main">
+            <ul>
+                <li class="menu_2"><a href="list.html">信息管理</a></li>
+                <li class="menu_2"><a href="index.html">网站首页</a></li>
+            </ul>
+        </div>
+        <div class="head_user">
+            <ul>
+                <li id="my_profile"><a href="avatar.php"><img src="static/picture/show.png" width="20" height="20"
+                                                              id="myavatar"/></a>
+                    <!--<div id="mini_profile" style="display:none;">
+                        <div>
+                            <dl>
+                                <dt><span class="f_r"><a href="edit.php"><img src="static/picture/setting.gif"
+                                                                              width="10" height="10" align="absmiddle"
+                                                                              title="资料设置"/></a></span><span
+                                        class="f_b px14">欢迎，孙宇豪</span> (genesisliang) <a href="account.php?action=line"
+                                                                                         title="在线，点击隐身"><img
+                                        src="static/picture/user_online.png" width="10" height="10" align="absmiddle"/></a>
+                                </dt>
+                                <dt><a href="http://www.58tongpu.com/index.php?homepage=genesisliang" target="_blank"
+                                       title="邯郸市厉害害网络科技有限公司"><span class="f_black">邯郸市厉害害网络科技有限公司</span></a>(企业会员)&nbsp;&nbsp;&nbsp;<a
+                                        href="account.php"><span class="f_dblue">账户详情&raquo;</span></a></dt>
+                                <dt><a href="record.php"><span class="f_black">资金:0.00</span></a> <span
+                                        class="f_gray">|</span>
+                                    <a href="credit.php"><span class="f_black">积分:6</span></a></dt>
+                            </dl>
+                        </div>
+                    </div>-->
+                </li>
+                <li id="destoon_chat"><a href="changepwd.html">修改密码</a></li>
+                <li><a href="javascript:;" onclick="quit()">退出</a></li>
+            </ul>
+
+        </div>
+        <div class="c_b"></div>
+    </div>
+</div>
+<script>
+    function quit() {
+        localStorage.clear()
+        window.location.href ='login.html'
+    }
+</script>
+<div class="head_s" id="destoon_space">&nbsp;</div>
+<div class="main_tb">
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td valign="top" class="side" id="side">
+                <div class="side_head">
+                    <div><img src="static/picture/side-post.png" align="absmiddle"/>商户后台</div>
+                </div>
+                <div class="side_body">
+                    <ul>
+                        <li class="side_a" id="mid_25"><span class="f_r"><!--<a href="my.php?mid=25&action=add"
+                                                                            class="m">发布</a>--></span><a
+                                href="javascript:;" class="n">商户列表</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td class="side_h" onClick="oh(this);" title="点击展开/隐藏侧栏" id="side_oh">&nbsp;</td>
+            <td valign="top" class="main" id="main">
+                <form method="post" id="dform" target="send">
+                    <!--<input type="hidden" name="city_id" value="邯郸"/>-->
+                    <table cellpadding="10" cellspacing="1" class="tb">
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 行业分类</td>
+                            <td class="tr">
+                                <div id="catesch"></div>
+                                <!--<input name="sort_id" id="catid_1" type="hidden" value="0"/>-->
+                                <span id="load_category_1">
+                                    <select onchange="load_category(this.value, 1);" id="industry">
+                                        <option value="0">选择分类</option>
+                                        <option value="126">餐饮美食</option>
+                                        <option value="127">美容美发</option>
+                                        <option value="128">服饰鞋包</option>
+                                        <option value="129">专柜转让</option>
+                                        <option value="130">休闲娱乐</option>
+                                        <option value="131">百货超市</option>
+                                        <option value="132">生活服务</option>
+                                        <option value="133">电器通讯</option>
+                                        <option value="134">汽修美容</option>
+                                        <option value="135">医疗器械</option>
+                                        <option value="136">家居建材</option>
+                                        <option value="137">教育培训</option>
+                                        <option value="138">酒店宾馆</option>
+                                        <option value="139">公司工厂</option>
+                                        <option value="140">其他</option>
+                                    </select>
+                                    <select  id="breed">
+                                        <option value="0">选择分类</option>
+                                        <option value="126">餐饮美食</option><option value="127">美容美发</option><option value="128">服饰鞋包</option><option
+                                            value="129">专柜转让</option><option value="130">休闲娱乐</option><option
+                                            value="131">百货超市</option><option value="132">生活服务</option><option
+                                            value="133">电器通讯</option><option value="134">汽修美容</option><option
+                                            value="135">医疗器械</option><option value="136">家居建材</option><option
+                                            value="137">教育培训</option><option value="138">酒店宾馆</option><option
+                                            value="139">公司工厂</option><option value="140">其他</option>
+                                    </select>
+                                </span>
+                                </span>
+
+                                <script>
+                                    function load_category(val){
+                                        for(var i=0;i<list.length;i++){
+                                            if(list[i].name==$("#industry").val()){
+                                                if(list[i].list_sorter.length==0){
+                                                    document.getElementById('breed').style.display='none'
+                                                    return
+                                                }
+                                                document.getElementById('breed').style.display='inline-block'
+                                                $('#breed').html('')
+                                                for(var j=0;j<list[0].list_sorter.length;j++){
+                                                    document.getElementById('breed').innerHTML+='<option value="'+list[0].list_sorter[j].name+'">'+list[0].list_sorter[j].name+'</option>'
+                                                }
+                                                // $('#breed').val(dataForm.sorter_id)
+                                            }
+                                        }
+                                    }
+                                    function GetQueryString(name) {
+                                        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                                        var r = window.location.search.substr(1).match(reg);
+                                        if(r!=null)return  unescape(r[2]); return null;
+                                    }
+                                    var dataForm = {}
+                                    $.ajax({
+                                        url: 'http://ceshi.hdjincheng.cn/ShangPu/ShopsId',
+                                        type: 'POST',
+                                        dataType: "json",
+                                        data: {
+                                            id: GetQueryString('id')
+                                        },
+                                        success: function (data) {
+                                            dataForm = data.shops
+                                            $('#load_category_1 select').val(data.shops.sort_id)
+                                            $('#breed').html(dataForm.sorter_id)
+                                            $("input[name='message_type'][type=radio][value='"+dataForm.message_type+"']").attr("checked",true);
+                                            $("input[name='business_state'][type=radio][value='"+dataForm.business_state+"']").attr("checked",true);
+                                            $('#splx').val(dataForm.types_id)
+                                            $('#mj').val(dataForm.acreage)
+                                            $('#lc').val(dataForm.floor)
+                                            $('#mk').val(dataForm.face_wide)
+                                            $('#cg').val(dataForm.layer_height)
+                                            $('#js').val(dataForm.depth)
+                                            $('#areaid_1').val(dataForm.city_id)
+                                            $('#xxdz').val(dataForm.address)
+                                            $('#zj').val(dataForm.money)
+                                            $('#zffs').val(dataForm.pay_type)
+                                            $('#qzq').val(dataForm.leaseterm)
+                                            $('#mzq').val(dataForm.mleaseterm)
+                                            $('#zrf').val(dataForm.transferfee)
+                                            $('#syzq').val(dataForm.sleaseterm)
+                                            $('#wyf').val(dataForm.propertyfee)
+                                            $('#df').val(dataForm.electricityfee)
+                                            $('#sf').val(dataForm.waterfee)
+                                            $('#title').val(dataForm.title)
+                                            $('#content').val(dataForm.detailed)
+                                            $('#name').val(dataForm.name)
+                                            $('#tel').val(dataForm.tel)
+                                            $("input[name='street'][type=radio][value='"+dataForm.street+"']").attr("checked",true);
+                                            $('#showthumb').attr('src','http://ceshi.hdjincheng.cn/ShangPu/upload/'+dataForm.imagee)
+                                            $('#showthumb1').attr('src','http://ceshi.hdjincheng.cn/ShangPu/upload/'+dataForm.imager)
+                                            $('#showthumb2').attr('src','http://ceshi.hdjincheng.cn/ShangPu/upload/'+dataForm.images)
+                                        }
+                                    })
+                                    var list;
+                                    //获取行业
+                                    $.ajax({
+                                        url: 'http://ceshi.hdjincheng.cn/ShangPu/SortSorter',
+                                        type: 'get',
+                                        dataType: "json",
+                                        data: {},
+                                        success: function (data) {
+                                            $('#industry').html('')
+                                            list = data.list_sort;
+                                            for (var i=0;i<list.length;i++){
+                                                document.getElementById('industry').innerHTML+='<option value="'+list[i].name+'">'+list[i].name+'</option>';
+                                                $('#industry').val(dataForm.sort_id)
+                                                // $('#breed').html('')
+                                                if(list[i].name == dataForm.sort_id){
+                                                    for(var j=0;j<list[i].list_sorter.length;j++){
+                                                        document.getElementById('breed').innerHTML+='<option value="'+list[i].list_sorter[j].name+'">'+list[i].list_sorter[j].name+'</option>'
+                                                        $('#breed').val(dataForm.sorter_id)
+                                                    }
+                                                }
+
+                                            }
+                                            var atd = document.getElementById('industry').getElementsByTagName('a');
+                                            for(var i=0;i<atd.length;i++){
+                                                atd[i].ind=i
+                                                atd[i].onclick=function (){
+                                                    var _this=this
+                                                    var type=list[this.ind].list_sorter;
+
+                                                    var aLi = document.getElementsByClassName('list-cate')[0].getElementsByTagName('a');
+                                                    for(var i=0;i<aLi.length;i++){
+                                                        if(aLi[i].innerHTML==_this.innerHTML){
+                                                            _this.className=' on'
+                                                        }else {
+                                                            aLi[i].className='px16'
+                                                        }
+                                                    }
+                                                    sort_id = _this.innerHTML;
+                                                    var Ttype = document.getElementById('Ttype');
+                                                    Ttype.style.display = 'block';
+                                                    var oFram = document.createDocumentFragment();
+                                                    var TtypeUl = document.getElementById('Ttype').getElementsByTagName('ul')[0];
+                                                    Ttype.removeChild(TtypeUl);
+                                                    var oUl = document.createElement('ul');
+                                                    for (var i=0;i<type.length;i++){
+                                                        var oLi = document.createElement('li');
+                                                        var oA = document.createElement('a');
+                                                        oA.innerHTML = type[i].name;
+                                                        oLi.appendChild(oA);
+                                                        oFram.appendChild(oLi);
+                                                    }
+                                                    oUl.appendChild(oFram);
+                                                    for(var i=0;i<oUl.getElementsByTagName('li').length;i++){
+                                                        oUl.getElementsByTagName('li')[i].onclick = function () {
+                                                            types_id=this.getElementsByTagName('a')[0].innerHTML;
+                                                            $("#Ttype li").removeClass("selected");
+                                                            this.className='selected'
+                                                        }
+                                                    }
+                                                    Ttype.appendChild(oUl)
+                                                }
+                                            }
+                                        }
+                                    });
+
+                                </script>
+                                <script type="text/javascript">var category_moduleid = new Array;
+                                category_moduleid[1] = "25";
+                                var category_title = new Array;
+                                category_title[1] = '选择分类';
+                                var category_extend = new Array;
+                                category_extend[1] = '7450KKUTDVOCtSawJORkMHtkIXGpsz3c11019HILl74-E-';
+                                var category_catid = new Array;
+                                category_catid[1] = '0';
+                                var category_deep = new Array;
+                                category_deep[1] = '0';</script>
+                                <!-- <script type="text/javascript" src="static/js/category.js"></script> -->
+                                <!--<a href="javascript:schcate(25);" class="t">搜索分类</a>-->
+                                <span id="dcatid" class="f_red"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 信息类型</td>
+                            <td class="tr">
+                                <span id="xxlx">
+                                    <input type="radio" name="message_type" value="商铺转让" id="xxlx_0" checked> 商铺转让&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="message_type" value="求店求租" id="xxlx_1"> 求店求租&nbsp;&nbsp;&nbsp;
+                                </span>
+                                <span class="f_red" id="dxxlx"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 商铺类型</td>
+                            <td class="tr"><select name="types_id" id="splx">
+                                <option value="">请选择</option>
+                                <option value="商业街商铺">商业街商铺</option>
+                                <option value="写字楼配套">写字楼配套</option>
+                                <option value="社区底商">社区底商</option>
+                                <option value="档口摊位">档口摊位</option>
+                                <option value="其他">其他</option>
+                                <option value="临街门面">临街门面</option>
+                                <option value="购物百货中心">购物百货中心</option>
+                            </select> <span class="f_red" id="dsplx"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 当前状态</td>
+                            <td class="tr"><span id="dqzt"><input type="radio" name="business_state" value="经营中"
+                                                                  id="dqzt_0"> 经营中&nbsp;&nbsp;&nbsp;<input type="radio"
+                                                                                                           name="business_state"
+                                                                                                           value="空置中"
+                                                                                                           id="dqzt_1"> 空置中&nbsp;&nbsp;&nbsp;</span>
+                                <span class="f_red" id="ddqzt"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 面积</td>
+                            <td class="tr"><input type="text" name="acreage" id="mj" value="" size="20"/> <span
+                                    class="f_red" id="dmj"></span>平米
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 楼层</td>
+                            <td class="tr"><input type="text" name="floor" id="lc" value="" size="20"/> <span
+                                    class="f_red" id="dlc"></span>层
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 面宽</td>
+                            <td class="tr"><input type="text" name="face_wide" id="mk" value="" size="20"/> <span
+                                    class="f_red" id="dmk"></span>米
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 层高</td>
+                            <td class="tr"><input type="text" name="layer_height" id="cg" value="" size="20"/> <span
+                                    class="f_red" id="dcg"></span>米
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 进深</td>
+                            <td class="tr"><input type="text" name="depth" id="js" value="" size="20"/> <span
+                                    class="f_red" id="djs"></span>米
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 是否临街</td>
+                            <td class="tr"><span id="sflj"><input type="radio" name="street" value="临街" id="sflj_0"> 是&nbsp;&nbsp;&nbsp;<input
+                                    type="radio" name="street" value="不临街" id="sflj_1"> 否&nbsp;&nbsp;&nbsp;</span> <span
+                                    class="f_red" id="dsflj"></span></td>
+                        </tr>
+                        <!--<tr>
+                            <td class="tl"><span class="f_red">*</span> 商铺位置</td>
+                            <td class="tr"><input name="city_id" id="areaid_1" type="hidden" value="0"/><span
+                                    id="load_area_1"><select onchange="load_area(this.value, 1);"><option
+                                    value="0">请选择</option><option value="1">北京</option><option value="2">上海</option><option
+                                    value="3">天津</option><option value="4">重庆</option><option value="5">河北</option><option
+                                    value="6">山西</option><option value="7">内蒙古</option><option value="8">辽宁</option><option
+                                    value="9">吉林</option><option value="10">黑龙江</option><option value="11">江苏</option><option
+                                    value="12">浙江</option><option value="13">安徽</option><option value="14">福建</option><option
+                                    value="15">江西</option><option value="16">山东</option><option value="17">河南</option><option
+                                    value="18">湖北</option><option value="19">湖南</option><option value="20">广东</option><option
+                                    value="21">广西</option><option value="22">海南</option><option value="23">四川</option><option
+                                    value="24">贵州</option><option value="25">云南</option><option value="26">西藏</option><option
+                                    value="27">陕西</option><option value="28">甘肃</option><option value="29">青海</option><option
+                                    value="30">宁夏</option><option value="31">新疆</option><option value="32">台湾</option><option
+                                    value="33">香港</option><option value="34">澳门</option></select> </span>
+                                <script type="text/javascript">var area_title = new Array;
+                                area_title[1] = '请选择';
+                                var area_extend = new Array;
+                                area_extend[1] = 'd917e6AobMDkAjdaI3rLe-P-2I-P&#45;&#45;P-XrmLCNONenMxSU6M0-E-';
+                                var area_areaid = new Array;
+                                area_areaid[1] = '0';
+                                var area_deep = new Array;
+                                area_deep[1] = '0';</script>
+                                &lt;!&ndash; <script type="text/javascript" src="static/js/area.js"></script>  &ndash;&gt;<span
+                                        class="f_red" id="dspwz"></span></td>
+                        </tr>-->
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 商铺位置</td>
+                            <td class="tr">
+                                <input name="city_id" id="areaid_1" type="text" value="" onkeyup="change(this)"/>
+                                <div class="mask">
+                                    <ul id="mask">
+                                        <li>北京</li>
+                                        <li>上号</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 详细地址</td>
+                            <td class="tr"><input type="text" name="post_fields[xxdz]" id="xxdz" value="" size="60"/>
+                                <span class="f_red" id="dxxdz"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 租金</td>
+                            <td class="tr"><input type="text" name="money" id="zj" value="" size="20"/> <span
+                                    class="f_red" id="dzj"></span>元/㎡/天或 元/月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 支付方式</td>
+                            <td class="tr"><input type="text" name="pay_type" id="zffs" value="" size="20"/> <span
+                                    class="f_red" id="dzffs"></span>押/月 付/月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">起租期</td>
+                            <td class="tr"><input type="text" name="leaseterm" id="qzq" value="" size="20"/> <span
+                                    class="f_red" id="dqzq"></span>月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">免租期</td>
+                            <td class="tr"><input type="text" name="mleaseterm" id="mzq" value="" size="20"/> <span
+                                    class="f_red" id="dmzq"></span>月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">转让费</td>
+                            <td class="tr"><input type="text" name="transferfee" id="zrf" value="" size="20"/> <span
+                                    class="f_red" id="dzrf"></span>万元
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">剩余租期</td>
+                            <td class="tr"><input type="text" name="sleaseterm" id="syzq" value="" size="20"/> <span
+                                    class="f_red" id="dsyzq"></span>月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">物业费</td>
+                            <td class="tr"><input type="text" name="propertyfee" id="wyf" value="" size="20"/> <span
+                                    class="f_red" id="dwyf"></span>元/㎡/月
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">电费</td>
+                            <td class="tr"><input type="text" name="electricityfee" id="df" value="" size="20"/> <span
+                                    class="f_red" id="ddf"></span>元/度
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">水费</td>
+                            <td class="tr"><input type="text" name="waterfee" id="sf" value="" size="20"/> <span
+                                    class="f_red" id="dsf"></span>元/吨
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl"><span class="f_red">*</span> 信息标题</td>
+                            <td class="tr f_gray"><input name="title" type="text" id="title" size="50" value=""/>
+                                （2-30个字）<span id="dtitle" class="f_red"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="tl">详细说明</td>
+                            <td class="tr f_gray"><textarea name="detailed" id="content" class="dsn"
+                                                            style='width:650px;height:150px;'></textarea>
+                                <!-- <script type="text/javascript">var ModuleID = 25;var DTAdmin = 0;var EDPath = "editor/fckeditor/";var ABPath = "http://www.58tongpu.com/member/editor/fckeditor/";var EDW = "100%";var EDH = "350px";var EDD = "0";var EID = "content";var FCKID = "content";</script><script type="text/javascript" src="static/js/fckeditor.js"></script><script type="text/javascript">window.onload = function() {var sBasePath = "editor/fckeditor/";var oFCKeditor = new FCKeditor("content");oFCKeditor.Width = "100%";oFCKeditor.Height = "350px";oFCKeditor.BasePath = sBasePath;oFCKeditor.ToolbarSet = "Destoon";oFCKeditor.ReplaceTextarea();}</script><script type="text/javascript" src="static/js/init.api.js"></script><script type="text/javascript" src="static/js/editor.js"></script> -->
+                                <br/>
+                                1、建议您描述以下方面：产品的性能及优点、用途、售后服务、包装等；<br/>
+                                2、为避免不必要的纠纷，请使用本企业图片；<br/>
+                                <span id="dcontent" class="f_red"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">产品图片</td>
+                            <td class="tr">
+                                <!--<input type="hidden" name="images" id="thumb" value=""/>-->
+                                <!--<input type="hidden" name="images" id="thumb1" value=""/>-->
+                                <!--<input type="hidden" name="images" id="thumb2" value=""/>-->
+                                <input type="hidden" id="thumb"/>
+                                <input type="hidden" id="thumb1" />
+                                <input type="hidden" id="thumb2"/>
+                                <table width="360">
+                                    <tr align="center" height="120" class="c_p">
+                                        <td width="120"><img src="static/picture/waitpic.gif" width="100" height="100" id="showthumb" title="预览图片" alt=""/>
+                                            <!--<input type="file" id="uploadimg"/>-->
+                                        </td>
+                                        <!--<script>
+                                        $('#uploadimg').change(function (obj) {
+                                        var x = document.getElementById("uploadimg").files;
+                                        //把获得的文件名放入text里面显示
+                                        console.log(x[0].name)
+                                        $("#updateFile").val(x[0].name);
+                                        var forms = new FormData($("#xx")[0]);
+                                        $.ajax({
+                                        url: "http://ceshi.hdjincheng.cn/ShangPu/ImageUpload",
+                                        type: "post",
+                                        data: forms,
+                                        processData: false,
+                                        contentType: false,
+                                        success: function (data) {
+                                        console.log(data)
+                                        $('#showthumb').attr('src', 'http://ceshi.hdjincheng.cn/ShangPu/' + data.src)
+                                        alert('成功返回处理!');
+                                        }
+                                        });
+                                        })
+                                        </script>-->
+                                        <td width="120">
+                                            <img src="static/picture/waitpic.gif" width="100" height="100" id="showthumb1" title="预览图片" alt="" onclick="if(this.src.indexOf('waitpic.gif') == -1){_preview(Dd('showthumb1').src, 1);}else{Dalbum(1,25,200,200, Dd('thumb1').value, true);}"/>
+                                        </td>
+                                        <td width="120">
+                                            <img src="static/picture/waitpic.gif" width="100" height="100"
+                                                 id="showthumb2" title="预览图片" alt=""
+                                                 onclick="if(this.src.indexOf('waitpic.gif') == -1){_preview(Dd('showthumb2').src, 1);}else{Dalbum(2,25,200,200, Dd('thumb2').value, true);}"/>
+                                        </td>
+                                    </tr>
+                                    <tr align="center" class="c_p">
+                                        <td><img src="static/picture/img_upload.gif" width="12" height="12" title="上传"
+                                                 onclick="Dalbum('',25,200,200, Dd('thumb').value, true);"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_select.gif" width="12" height="12" title="选择"
+                                                onclick="selAlbum('');"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_delete.gif" width="12" height="12" title="删除"
+                                                onclick="delAlbum('','wait');"/></td>
+                                        <td><img src="static/picture/img_upload.gif" width="12" height="12" title="上传"
+                                                 onclick="Dalbum(1,25,200,200, Dd('thumb1').value, true);"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_select.gif" width="12" height="12" title="选择"
+                                                onclick="selAlbum(1);"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_delete.gif" width="12" height="12" title="删除"
+                                                onclick="delAlbum(1,'wait');"/></td>
+                                        <td><img src="static/picture/img_upload.gif" width="12" height="12" title="上传"
+                                                 onclick="Dalbum(2,25,200,200, Dd('thumb2').value, true);"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_select.gif" width="12" height="12" title="选择"
+                                                onclick="selAlbum(2);"/>&nbsp;&nbsp;<img
+                                                src="static/picture/img_delete.gif" width="12" height="12" title="删除"
+                                                onclick="delAlbum(2,'wait');"/></td>
+                                    </tr>
+                                </table>
+                                <span id="dthumb" class="f_red"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">发布人</td>
+                            <td class="tr">
+                                <input type="text" name="name" value="" size="20" id="name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tl">电话</td>
+                            <td class="tr">
+                                <input type="text" name="tel" value="" size="20" id="tel"/>
+                            </td>
+                        </tr>
+                        <!--<tr>-->
+                        <!--<td class="tl">过期时间</td>-->
+                        <!--<td class="tr f_gray">-->
+                        <!--<script type="text/javascript" src="static/js/calendar.js"></script>-->
+                        <!--<input type="text" name="post[totime]" id="posttotime" value="" size="20"-->
+                        <!--onfocus="ca_show('posttotime', '-', 1);" readonly ondblclick="this.value='';"/>&nbsp;-->
+                        <!--<select onchange="Dd('posttotime').value=this.value;">-->
+                        <!--<option value="">快捷选择</option>-->
+                        <!--<option value="">长期有效</option>-->
+                        <!--<option value="2018-07-12 23:59:59">3天</option>-->
+                        <!--<option value="2018-07-16 23:59:59">一周</option>-->
+                        <!--<option value="2018-07-24 23:59:59">半月</option>-->
+                        <!--<option value="2018-08-08 23:59:59">一月</option>-->
+                        <!--<option value="2019-01-07 23:59:59">半年</option>-->
+                        <!--<option value="2019-07-09 23:59:59">一年</option>-->
+                        <!--</select>&nbsp;-->
+                        <!--不选表示长期有效-->
+                        <!--<span id="dposttotime" class="f_red"></span></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td class="tl">自定义分类</td>-->
+                        <!--<td class="tr"><span id="type_box"><select name="post[mycatid]"><option value="0"-->
+                        <!--selected=selected>默认</option></select></span>&nbsp;-->
+                        <!--<a href="javascript:var type_item='product-3',type_name='post[mycatid]',type_default='默认',type_id=0,type_interval=setInterval('type_reload()',500);Dwidget('type.php?item=product', '[分类]', 600, 300);"-->
+                        <!--class="t">[管理分类]</a></td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td class="tl">我的推荐</td>-->
+                        <!--<td class="tr">-->
+                        <!--<input type="radio" name="post[elite]" value="1"/> 是-->
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<input type="radio" name="post[elite]" value="0" checked/> 否-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td class="tl">推荐到网站首页</td>-->
+                        <!--<td class="tr">-->
+                        <!--<input type="checkbox" name="elite" value="1"-->
+                        <!--onclick="if(6 < 100) {confirm('积分不足，当前余额:6');this.checked=false;}"/>-->
+                        <!--需要上传至少1张产品图片，且需消费 <strong class="f_red">100</strong> 积分-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!-- <tr>
+                        <td class="tl"><span class="f_red">*</span> 验证问题</td>
+                        <td class="tr"><span onmouseover="if(Dd('question').style.display=='none') reloadquestion();"><span id="question" style="display:none;"><span id="questionstr"></span>&nbsp;&nbsp;<a href="javascript:reloadquestion();">[换个问题]</a><br/></span>
+                        <input name="answer" id="answer" type="text" size="30" class="input-question" placeholder="点击显示问题并填写答案"/><span id="canswer"></span>
+                        </span> -->
+                        <script type="text/javascript">
+                            function reloadquestion() {
+                                Dd('question').style.display = '';
+                                Dd('canswer').innerHTML = '';
+                                Dd('answer').value = '';
+                                Dd('canswer').innerHTML = '';
+                                $('#destoon_question').remove();
+                                s = document.createElement("script");
+                                s.type = "text/javascript";
+                                s.id = "destoon_question";
+                                s.src = "http://www.58tongpu.com/api/captcha.png.php?action=question&refresh=" + Math.random() + ".js";
+                                document.body.appendChild(s);
+                            }
+
+                            function checkanswer(s) {
+                                s = $.trim(s);
+                                var t = encodeURIComponent(s);
+                                if (t.indexOf('%E2%80%86') != -1) s = decodeURIComponent(t.replace(/%E2%80%86/g, ''));
+                                if (s.length < 1) {
+                                    Dd('answer').focus;
+                                    return;
+                                }
+                                $.post(AJPath, 'action=question&answer=' + s,
+                                    function (data) {
+                                        if (data == '0') {
+                                            Dd('canswer').innerHTML = '&nbsp;&nbsp;<img src="static/picture/check-ok.png" align="absmiddle"/>';
+                                        } else {
+                                            Dd('answer').focus;
+                                            Dd('canswer').innerHTML = '&nbsp;&nbsp;<img src="static/picture/check-ko.png" align="absmiddle"/>';
+                                        }
+                                    }
+                                );
+                            }
+
+                            $(function () {
+                                $('#answer').bind('keyup blur', function () {
+                                    checkanswer($('#answer').val());
+                                });
+                            });
+                        </script> <!-- <span id="danswer" class="f_red"></span></td>
+</tr>
+<tr>
+<td class="tl"><span class="f_red">*</span> 验证码</td>
+<td class="tr"><input name="captcha" id="captcha" type="text" size="6" placeholder="验证码" class="input-captcha"/>&nbsp;<img src="static/picture/captcha.png.php" title="验证码,看不清楚?请点击刷新&#10;字母不区分大小写" alt="" align="absmiddle" id="captchapng" onclick="reloadcaptcha();" style="cursor:pointer;"/><span id="ccaptcha"></span> -->
+                        <script type="text/javascript">
+                            function reloadcaptcha() {
+                                Dd('captchapng').src = 'http://www.58tongpu.com/api/captcha.png.php?action=image&refresh=' + Math.random();
+                                Dd('ccaptcha').innerHTML = '';
+                                Dd('captcha').value = '';
+                            }
+
+                            function checkcaptcha(s) {
+                                s = $.trim(s);
+                                var t = encodeURIComponent(s);
+                                if (t.indexOf('%E2%80%86') != -1) s = decodeURIComponent(t.replace(/%E2%80%86/g, ''));
+                                if (!is_captcha(s)) return;
+                                $.post(AJPath, 'action=captcha&captcha=' + s,
+                                    function (data) {
+                                        if (data == '0') {
+                                            Dd('ccaptcha').innerHTML = '&nbsp;&nbsp;<img src="static/picture/check-ok.png" align="absmiddle"/>';
+                                        } else {
+                                            Dd('captcha').focus;
+                                            Dd('ccaptcha').innerHTML = '&nbsp;&nbsp;<img src="static/picture/check-ko.png" align="absmiddle"/>';
+                                        }
+                                    }
+                                );
+                            }
+
+                            function is_captcha(v) {
+                                if (v.match(/^[a-z0-9A-Z]{1,}$/)) {
+                                    return v.match(/^[a-z0-9A-Z]{4,}$/);
+                                } else {
+                                    return v.length > 1;
+                                }
+                            }
+
+                            $(function () {
+                                $('#captcha').bind('keyup blur', function () {
+                                    checkcaptcha($('#captcha').val());
+                                });
+                            });
+                        </script> <!-- <span id="dcaptcha" class="f_red"></span></td>
+</tr> -->
+                        <tr style="display:none;" id="weibo_sync">
+                            <td class="tl">同步主题</td>
+                            <td class="tr" id="weibo_show"></td>
+                        </tr>
+                        <tr>
+                            <td class="tl">&nbsp;</td>
+                            <script>
+                                function checks() {
+                                    var l;
+                                    var f;
+                                    f = 'catid_1';
+
+                                    if ($('#load_category_1 select option:selected').text() == '选择分类') {
+                                        Dmsg('请选择所属分类', 'catid', 1);
+                                        return false;
+                                    }
+                                    f = 'title';
+                                    l = Dd(f).value.length;
+                                    if (l < 2 || l > 30) {
+                                        Dmsg('信息标题应为2-30字，当前已输入' + l + '字', f);
+                                        return false;
+                                    }
+                                    f = "xxlx";
+                                    l = $('input[name="message_type"]:checked').length;
+                                    if (l < 1) {
+                                        Dmsg("信息类型不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "types_id";
+                                    l = $('select#splx option:selected').length;
+                                    if (l < 1) {
+                                        Dmsg("商铺类型不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "dqzt";
+                                    l = $('input[name="business_state"]:checked').length;
+                                    if (l < 1) {
+                                        Dmsg("当前状态不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "mj";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("面积不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "lc";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("楼层不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "mk";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("面宽不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "cg";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("层高不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "js";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("进深不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "sflj";
+                                    l = $('input[name="street"]:checked').length;
+                                    ;
+                                    if (l < 1) {
+                                        Dmsg("是否临街不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "city_id";
+                                    l = $('#load_area_1 select option:selected').length;
+                                    // if (l == 0) {
+                                    //     Dmsg("请选择地区", f, 1);
+                                    //     return false;
+                                    // }
+//f = "xxdz";l = Dd(f).value.length;if(l < 1) {Dmsg("详细地址不能少于1字符", f);return false;}
+                                    f = "zj";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("租金不能少于1字符", f);
+                                        return false;
+                                    }
+                                    f = "zffs";
+                                    l = Dd(f).value.length;
+                                    if (l < 1) {
+                                        Dmsg("支付方式不能少于1字符", f);
+                                        return false;
+                                    }
+
+
+                                    // var street = $('input[name="street"]:checked').attr('id').split('_')[1],
+                                    //     business_state = $('input[name="business_state"]:checked').attr('id').split('_')[1],
+                                    //     message_type = $('input[name="message_type"]:checked').attr('id').split('_')[1];
+                                    var queryStr = $("#dform").serialize() +'&images='+$('#showthumb').attr('title')+'&imagee='+$('#showthumb1').attr('title')+'&imager='+$('#showthumb2').attr('title')+'&id='+GetQueryString('id')+'&city_id='+$("#areaid_1").val()+'&user_id='+localStorage.getItem('user58')+'&sort_id='+$("#industry").val()+'&sorter_id='+$("#breed").val();
+                                    console.log(queryStr)
+                                    // console.log($("#dform").serialize())
+                                    $.ajax({
+                                        url: 'http://ceshi.hdjincheng.cn/ShangPu/ShopsEdit',//这里写上你的action路径
+                                        data: queryStr,//将你在form表单上提交的数据序列化
+                                        /*data : {
+                                                 id:'',
+                                                city_id:'邯郸',
+                                                types_id:$('#splx option:selected').attr('value'),
+                                                sort_id:$('#load_category_1 select option:selected').attr('value'),
+                                                title:$('#title').val(),
+                                                images:images,
+                                                acreage:$('#mj').val(),
+                                                floor:$('#lc').val(),
+                                                face_wide:$('#mk').val,
+                                                layer_height:$('#cg').val(),
+                                                depth:$('#js').val(),
+                                                street:street,
+                                                business_state:business_state,
+                                                message_type:message_type,
+                                                money:$('#zj').val(),
+                                                pay_type:$('#zffs').val(),
+                                                leaseterm:$('#qzq').val(),
+                                                mleaseterm:$('#mzq').val(),
+                                                sleaseterm:$('#syzq').val(),
+                                                transferfee:$('#zrf').val(),
+                                                propertyfee:$('#wyf').val(),
+                                                electricityfee:$('#df').val(),
+                                                waterfee:$('#sf').val(),
+                                                detailed:$('#content').text()
+                                        },*/
+                                        type: 'POST', //提交方式
+                                        dataType: 'json', //提交的数据类型
+                                        async: false,
+                                        success: function (data) {
+                                            //这是个回调函数 data表示从action中传过来的json数据
+                                            //弹出从action层传过来的json格式的数据(用来显示是否更新成功)
+                                            if(data.code==200){
+                                                alert('发布成功')
+                                            }else {
+                                                alert(data.msg)
+                                            }
+                                        },
+                                        fail: function (data) {
+                                            alert(data)
+                                        }
+                                    });
+                                }
+                            </script>
+                            <td class="tr" height="50">
+
+                                <input type="button" name="submit" value=" 修 改 " class="btn_g" onclick="checks();"/>&nbsp;&nbsp;&nbsp;
+                                &nbsp;
+                                <input type="button" value=" 返 回 " class="btn" onclick="history.back(-1);"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="back2top"><a href="javascript:void(0);" title="返回顶部">&nbsp;</a></div>
+<script type="text/javascript">
+    $(function () {
+        var h1 = $(window).height(), h2 = $('#main').height();
+        if (h1 > h2) $('#main').height(h1 - 67);
+        if (get_local('m_side') == 'Y' && Dd('side_oh').className == 'side_h') {
+            Dh('side');
+            Dd('side_oh').className = 'side_s';
+        }
+        var destoon_message = 0;
+        var destoon_chat = 0;
+        window.setInterval('PushNew()', 10 * 1000);
+        if ($('#mini_profile').length > 0) {
+            $('#my_profile').mouseover(function () {
+                $('#mini_profile').show('fast');
+                $('#my_profile').bind('mouseleave', function () {
+                    $('#mini_profile').hide();
+                });
+            });
+        }
+    });
+
+</script>
+<script>
+
+    var oUl = document.getElementById('mask');
+    var ali = oUl.getElementsByTagName("li");
+    function select(name) {
+        $("#areaid_1").val(name)
+        document.getElementsByClassName('mask')[0].style.display = 'none';
+    }
+    function change(_this){
+        $.ajax({
+            url: 'http://ceshi.hdjincheng.cn/ShangPu/CityChaxin',
+            type: 'post',
+            dataType: "json",
+            data: {title:_this.value},
+            success: function (data) {
+                oUl.innerHTML = '';
+                for(var i=0;i<data.list_city.length;i++){
+                    oUl.innerHTML+="<li onclick='select(\""+data.list_city[i].title+"\")'>"+data.list_city[i].title+"</li>"
+
+                }
+                document.getElementsByClassName('mask')[0].style.display = 'block';
+            }
+        })
+        }
+</script>
+</body>
+</html>

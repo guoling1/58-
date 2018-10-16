@@ -1,0 +1,809 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>邯郸站_58同铺</title>
+    <meta name="keywords" content="58同铺"/>
+    <meta name="description" content="58同铺"/>
+    <meta http-equiv="mobile-agent" content="format=html5;url=http://www.58tongpu.com/mobile/">
+    <meta name="generator" content="DESTOON B2B - www.destoon.com"/>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="bookmark" type="image/x-icon" href="http://www.58tongpu.com/favicon.ico"/>
+    <link rel="archives" title="58同铺" href="http://www.58tongpu.com/archiver/"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="static/css/ie6.css"/>
+    <![endif]-->
+    <script type="text/javascript">window.onerror = function () {
+        return true;
+    }</script>
+    <script type="text/javascript" src="static/js/lang.js"></script>
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!--[if lte IE 9]><!-->
+    <script type="text/javascript" src="static/js/jquery-1.5.2.min.js"></script>
+    <!--<![endif]-->
+    <!--[if (gte IE 10)|!(IE)]><!-->
+    <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/page.js"></script>
+    <script type="text/javascript">
+        var searchid = 25;
+    </script>
+</head>
+<body>
+<style>
+    .mask{
+        display: none;
+        position: absolute;
+        background: #fff;
+        z-index: 111;
+        border: 1px solid #ccc;
+        /*width: 200px;*/
+        min-height: 300px;
+    }
+    .mask input{
+        font-size: 12px;
+        padding: 4px;
+    }
+    .mask li{
+        float: none;
+        margin: 0;
+        text-align: center;
+        line-height: 20px;
+        /*display: block;*/
+    }
+    .mask li:hover{
+        background: #ddd;
+    }
+</style>
+<div class="head" id="head">
+    <div class="head_m">
+        <div class="head_r" id="destoon_member"></div>
+        <div class="head_l">
+            <ul>
+                <li class="h_location"><a href="city.html" title="点击切换城市"><span id="destoon_city">邯郸</span></a></li>
+                <li class="h_fav">
+                    <script type="text/javascript">addFav('收藏本页');</script>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m">
+    <div id="search_tips" style="display:none;"></div>
+</div>
+<div id="destoon_qrcode" style="display:none;"></div>
+<div class="m">
+    <div id="search_module" style="display:none;" onMouseOut="Dh('search_module');" onMouseOver="Ds('search_module');">
+        <ul>
+            <li onClick="setModule('25','生意转让')">生意转让</li>
+            <li onClick="setModule('25','求店求租')">求店求租</li>
+        </ul>
+    </div>
+</div>
+<div class="m" id="ehfhgkkdgdhs">
+    <div class="head_zj">
+        <div class="logo f_l"><a href="http://www.58tongpu.com/"><img src="static/picture/161458341.png"
+                                                                      alt="58同铺"/></a></div>
+        <form id="destoon_search" >
+            <input type="hidden" name="moduleid" value="25" id="destoon_moduleid"/>
+            <input type="hidden" name="spread" value="0" id="destoon_spread"/>
+            <div class="head_search">
+                <div>
+                    <input name="kw" id="destoon_kw" type="text" class="search_i" value="" placeholder="请输入关键词"
+                           onFocus="if(this.value=='请输入关键词') this.value='';"
+                           autocomplete="off" x-webkit-speech speech/>
+                    <input type="text" id="destoon_select"class="search_m" value="生意转让" readonly
+                                                                             onFocus="this.blur();"
+                                                                             onClick="$('#search_module').fadeIn('fast');"/>
+                    <input type="" value=" " class="search_s" onclick="searchFn()"/>
+                </div>
+            </div>
+        </form>
+        <div class="head_search_kw f_l"><a href="javascript:;" onclick="toAdd()" target="_blank">免费发布</a></div>
+    </div>
+</div>
+<script type="text/javascript"><!--事件一-->
+function searchFn() {
+    message_type = $("#destoon_select").val()
+    var xxl = document.getElementById('Txxlx').getElementsByTagName('a');
+    for(var i=0;i<xxl.length;i++){
+        if(xxl[i].innerHTML==message_type){
+            xxl[i].parentNode.className ="xxlxda selected"
+        }else {
+            xxl[i].parentNode.className ="xxlxda"
+        }
+    }
+    document.getElementById('content').innerHTML='';
+    getData()
+}
+function toAdd() {
+    if(localStorage.getItem('user58')){
+        window.location.href='list.html'
+    }else {
+        window.location.href='login.html'
+    }
+}
+function wueyhfhjdg(obj, type, fn) {
+    if (obj.attachEvent) {
+        obj.attachEvent('on' + type, function () {
+            fn.call(obj);
+        })
+    } else {
+        obj.addEventListener(type, fn, false);
+    }
+}
+
+/*wueyhfhjdg(window, 'scroll', function () {
+    var tymnc = document.documentElement.scrollTop || document.body.scrollTop;
+    var mydiv = document.getElementById("ehfhgkkdgdhs");
+    if (tymnc >= 150) {
+        mydiv.style.position = "fixed";
+        mydiv.style.width = "100%";
+        mydiv.style.background = "rgba(255,85,46,.9)";
+        mydiv.style.top = "0px";
+    }
+    else {
+        mydiv.style.position = "inherit";
+        mydiv.style.width = "1200px";
+        mydiv.style.background = "#ffffff";
+    }
+});*/
+</script>
+<div class="m b20" id="headb"></div>
+<!--获取定位-->
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    var area=returnCitySN.cname.split('省')[1];
+    function QueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = decodeURI(window.location.search).substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    if(QueryString('areaid')){
+        area=QueryString('areaid');
+        $("#destoon_city").html(area)
+        getData()
+    }else {
+        $('#destoon_city').html(returnCitySN.cname);
+    }
+    function getQueryString() {
+        var result = location.search.match(new RegExp("[\?\&][^\?\&]+=[^\?\&]+", "g"));
+        if (result == null) {
+            return "";
+        }
+        for (var i = 0; i < result.length; i++) {
+            result[i] = result[i].substring(1);
+        }
+        return result;
+    }
+
+    function goSort(name, value) {
+        var string_array = getQueryString();
+        // var oldUrl = (document.URL.indexOf("index.php") == -1) ? document.URL + "index.php" : document.URL;
+        var oldUrl =  document.URL;
+        var newUrl;
+        if (string_array.length > 0)//如果已经有筛选条件
+        {
+            var repeatField = false;
+            for (var i = 0; i < string_array.length; i++) {
+                if (!(string_array[i].indexOf(name) == -1)) {
+                    repeatField = true;//如果有重复筛选条件，替换条件值
+                    newUrl = oldUrl.replace(string_array[i], name + "=" + value);
+                }
+            }
+
+//如果没有重复的筛选字段
+            if (repeatField == false) {
+                newUrl = oldUrl + "&" + name + "=" + value;
+            }
+
+        } else {//如果还没有筛选条件
+            newUrl = oldUrl + "?" + name + "=" + value;
+        }
+
+//跳转
+        window.location = newUrl;
+    }
+
+    function setSelected(name, value) {
+        var all_li = $("#" + name).find("li");
+//清除所有li标签的selected类
+        all_li.each(function () {
+            $(this).removeClass("selected");
+        });
+//为选中的li增加selected类
+        all_li.eq(value).addClass("selected");
+    }
+
+    $(document).ready(function () {
+        var string_array = getQueryString();
+        for (var i = 0; i < string_array.length; i++) {
+            var tempArr = string_array[i].split("=");
+            setSelected(tempArr[0], tempArr[1]);//设置选中的筛选条件
+        }
+    });
+</script>
+<div class="m m3">
+    <div class="search_area-text2" id="Txxlx">
+        <ul>
+            <!--<li class="selected xxlxda"><a href="javascript:;" onclick="xxlxFn(this,'')">全部</a></li>-->
+            <li class="xxlxda selected" style="font-weight: bold;padding-left: 0;padding-right: 10px"><a href="javascript:;" onclick="xxlxFn(this,'商铺转让')">商铺转让</a>
+            </li>
+            <li class="xxlxda" style="font-weight: bold"><a href="javascript:;" onclick="xxlxFn(this,'求店求租')">求店求租</a>
+            </li>
+        </ul>
+    </div>
+    <div class="m3l o_h">
+        <div class="head-txt">行业：</div>
+        <div class="list-cate">
+            <table width="100%" cellpadding="0" cellspacing="0" id="industry">
+                <tr>
+                    <!--<td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16 on" onclick="tardeFn(this,footList)">全部</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,footList)">餐饮美食</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,hairdList)">美容美发</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,clothList)" class="px16">服饰鞋包</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a  href="javascript:;" class="px16" onclick="tardeFn(this,shoppeList)" class="px16">专柜转让</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,arderList)" class="px16">休闲娱乐</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,smartList)" class="px16">百货超市</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,lifeList)" class="px16">生活服务</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,newsList)" class="px16">电器通讯</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,carList)" class="px16">汽修美容</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,healthList)" class="px16">医疗器械</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,buildList)" class="px16">家居建材</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,eduList)" class="px16">教育培训</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,hotelList)" class="px16">酒店宾馆</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,firmList)" class="px16">公司工厂</a>
+                        </p>
+                    </td>
+                    <td valign="top">
+                        <p>
+                            <a href="javascript:;" class="px16" onclick="tardeFn(this,clothList)" class="px16">其他</a>
+                        </p>
+                    </td>-->
+            </table>
+        </div>
+    </div>
+
+    <div class="search_area-center">
+        <div class="search_area-text" id="Ttype" style="display: none">
+            <h1>种类：</h1>
+            <ul>
+                <li class="selected"><a href="javascript:goSort('Ttype',0);">全部</a></li>
+                <li><a href="javascript:goSort('Ttype',1);">餐馆</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search_area-text" id="Tprice">
+            <h1>租金：</h1>
+            <ul>
+                <li class="selected"><a href="javascript:;" onclick="priceFn(this,'','')">全部</a></li>
+                <li><a href="javascript:;" onclick="priceFn(this,0,1999)">2000元/月以下</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,2000,5000)">2000-5000元/月</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,5000,8000)">5000-8000元/月</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,8000,10000)">8000-10000元/月</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,10000,20000)">1-2万元/月</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,20000,50000)">2-5万元/月</a>
+                </li>
+                <li><a href="javascript:;" onclick="priceFn(this,50000,1000000)">5万元/月以上</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search_area-text2" id="Tarea">
+            <h1>面积：</h1>
+            <ul>
+                <li class="selected"><a href="javascript:;" onclick="areaFn(this,'','')">全部</a></li>
+                <li><a href="javascript:;" onclick="areaFn(this,0,20)">20m²以下</a>
+                </li>
+                <li><a href="javascript:;" onclick="areaFn(this,20,50)">20-50m²</a>
+                </li>
+                <li><a href="javascript:;" onclick="areaFn(this,50,100)">50-100m²</a>
+                </li>
+                <li><a href="javascript:;" onclick="areaFn(this,100,200)">100-200m²</a>
+                </li>
+                <li><a href="javascript:;" onclick="areaFn(this,200,500)">200-500m²</a>
+                </li>
+                <li><a href="javascript:;" onclick="areaFn(this,500,100000)">500m²以上</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="search_area-text2" id="Tstructure">
+            <h1>类型：</h1>
+            <ul>
+                <li class="selected"><a href="javascript:;" onclick="structureFn(this,'')">全部</a></li>
+                <li><a href="javascript:;" onclick="structureFn(this,'商业街商铺')">商业街商铺</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'写字楼配套')">写字楼配套</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'社区底商')">社区底商</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'档口摊位')">档口摊位</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'其他')">其他</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'临街门面')">临街门面</a>
+                </li>
+                <li><a href="javascript:;" onclick="structureFn(this,'购物百货中心')">购物百货中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var list;
+        //获取行业
+        $.ajax({
+            url: 'http://ceshi.hdjincheng.cn/ShangPu/SortSorter',
+            type: 'get',
+            dataType: "json",
+            data: {},
+            success: function (data) {
+                $('#industry tr').html('')
+                list = data.list_sort;
+                for (var i=0;i<list.length;i++){
+                    document.getElementById('industry').getElementsByTagName('tr')[0].innerHTML+='<td valign="top" style="display: inline-block;padding-right: 10px">\n' +
+                        '                        <p>\n' +
+                        '                            <a href="javascript:;" class="px16" ind="'+i+'">'+list[i].name+'</a>\n' +
+                        '                        </p>\n' +
+                        '                    </td>'
+                }
+                var atd = document.getElementById('industry').getElementsByTagName('a');
+                for(var i=0;i<atd.length;i++){
+                    atd[i].ind=i
+                    atd[i].onclick=function (){
+                       var _this=this
+                         var type=list[this.ind].list_sorter;
+
+                        var aLi = document.getElementsByClassName('list-cate')[0].getElementsByTagName('a');
+                        for(var i=0;i<aLi.length;i++){
+                            if(aLi[i].innerHTML==_this.innerHTML){
+                                _this.className=' on'
+                            }else {
+                                aLi[i].className='px16'
+                            }
+                        }
+                        sort_id = _this.innerHTML;
+                        sorter_id = ''
+                        document.getElementById('content').innerHTML='';
+                        getData();
+
+                        var Ttype = document.getElementById('Ttype');
+                        Ttype.style.display = 'block';
+                        var oFram = document.createDocumentFragment();
+                        var TtypeUl = document.getElementById('Ttype').getElementsByTagName('ul')[0];
+                        Ttype.removeChild(TtypeUl);
+                        var oUl = document.createElement('ul');
+                        for (var i=0;i<type.length;i++){
+                            var oLi = document.createElement('li');
+                            var oA = document.createElement('a');
+                            oA.innerHTML = type[i].name;
+                            oLi.appendChild(oA);
+                            oFram.appendChild(oLi);
+                        }
+                        oUl.appendChild(oFram);
+                        for(var i=0;i<oUl.getElementsByTagName('li').length;i++){
+                            oUl.getElementsByTagName('li')[i].onclick = function () {
+                                sorter_id=this.getElementsByTagName('a')[0].innerHTML;
+                                document.getElementById('content').innerHTML='';
+                                getData();
+                                $("#Ttype li").removeClass("selected");
+                                this.className='selected'
+                            }
+                        }
+                        Ttype.appendChild(oUl)
+                        if(type.length==0){
+                            var Ttype = document.getElementById('Ttype');
+                            Ttype.style.display = 'none';
+                            return
+                        }
+                    }
+                }
+            }
+        })
+
+    </script>
+    <div class="search_area-foot"></div>
+    <script>
+        var numberPage = 1;
+        //获取广告
+        $.ajax({
+            url: 'http://ceshi.hdjincheng.cn/ShangPu/AdLieter',
+            type: 'get',
+            dataType: "json",
+            data: {
+            },
+            success: function (data) {
+                document.getElementById('slide_a14').innerHTML=''
+                for(var i=0;i<data.list_ad.length;i++){
+                    document.getElementById('slide_a14').innerHTML+="<a href=\""+data.list_ad[i].links+"\" target=\"_blank\"><img src=\"http://ceshi.hdjincheng.cn/ShangPu/uploadAd/"+data.list_ad[i].image+"\" width=\"1200\" height=\"150\" alt=\"\"/></a>"
+                }
+            new dslide('slide_a14');
+                document.getElementById('ade').innerHTML='';
+                for(var i=0;i<data.list_ade.length;i++){
+                    document.getElementById('ade').innerHTML+="<a href=\""+data.list_ade[i].links+"\" target=\"_blank\"><img src=\"http://ceshi.hdjincheng.cn/ShangPu/uploadAd/"+data.list_ade[i].image+"\" width=\"160\" height=\"100\" alt=\"\"/></a>"
+                }
+            }
+        })
+        var sort_id,sorter_id,types_id,money, money2, acreage, acreage2, message_type='商铺转让';
+        getData();
+        var footList = ['餐馆','食堂','面包店','冷饮甜品店','咖啡馆','茶艺馆','小吃店','水果食品店','凉茶店','快餐店'];
+        var hairdList = ['美容店','美发店','美甲店','SPA店'];
+        var clothList = ['服装店','内衣店','童装店','鞋店','箱包店','饰品店'];
+        var shoppeList = ['商场专柜','电子专柜','其他专柜'];
+        var arderList = ['网吧','酒吧','足疗','水疗','球馆','麻将馆','瑜伽馆','歌舞厅(KTV)','养生馆','夜总会','桌球城','健身房','游泳馆','休闲中心','棋牌室','电玩城','溜冰城','儿童乐园','婴儿游泳馆','度假山庄'];
+        var smartList = ['超市','便利店','小卖部','精品店','干货杂货店','烟酒茶叶店','母婴用品店','玩具店','文具店','书店','音像店','眼镜店','化妆品店','乐器店','工艺品店','珠宝首饰','床上用品','体育用品店'];
+        var lifeList = ['干洗店','花店水族','公话超市','彩票店','报刊亭','送水送气店','宠物店','照相馆','婚纱摄影店','婚介所','职介所','家政中心','打字复印','美鞋修鞋店'];
+        var newsList = ['手机店','电脑店','电器店','维修店','通讯用品店'];
+        var carList = ['汽修厂','汽配店','轮胎店','汽车美容店','车场'];
+        var healthList = ['医院','诊所','药店','保健品店','成人用品店'];
+        var buildList = ['五金店','建材店','家具店','灯饰店','家居饰品店','装饰装修材料店'];
+        var eduList = ['学校','幼儿园','培训机构','家教中心','早教中心'];
+        var hotelList = ['旅馆','宾馆酒店','招待所','公寓房'];
+        var firmList = ['公司转让','工厂转让'];
+        function tardeFn(_this,type){
+            var aLi = document.getElementsByClassName('list-cate')[0].getElementsByTagName('a');
+            for(var i=0;i<aLi.length;i++){
+                if(aLi[i].innerHTML==_this.innerHTML){
+                    _this.className=' on'
+                }else {
+                    aLi[i].className='px16'
+                }
+            }
+            sort_id = _this.innerHTML;
+            getData();
+            var Ttype = document.getElementById('Ttype');
+            Ttype.style.display = 'block';
+            var oFram = document.createDocumentFragment();
+            var TtypeUl = document.getElementById('Ttype').getElementsByTagName('ul')[0];
+            Ttype.removeChild(TtypeUl);
+            var oUl = document.createElement('ul');
+            for (var i=0;i<type.length;i++){
+                var oLi = document.createElement('li');
+                var oA = document.createElement('a');
+                oA.innerHTML = type[i].name;
+                oLi.appendChild(oA);
+                oFram.appendChild(oLi);
+            }
+            oUl.appendChild(oFram);
+            for(var i=0;i<oUl.getElementsByTagName('li').length;i++){
+                oUl.getElementsByTagName('li')[i].onclick = function () {
+                    types_id=this.getElementsByTagName('a')[0].innerHTML;
+                    getData();
+                    $("#Ttype li").removeClass("selected");
+                    this.className='selected'
+                }
+            }
+            Ttype.appendChild(oUl)
+        }
+        function priceFn(_this,num1,num2){
+            money = num1;
+            money2 = num2;
+            document.getElementById('content').innerHTML='';
+            getData();
+            $("#Tprice li").removeClass("selected");
+            _this.parentNode.className='selected'
+        }
+        function areaFn(_this,num1, num2){
+            acreage = num1;
+            acreage2 = num2;
+            document.getElementById('content').innerHTML='';
+            getData();
+            $("#Tarea li").removeClass("selected");
+            _this.parentNode.className='selected'
+        }
+        function structureFn(_this,num){
+            types_id = num;
+            document.getElementById('content').innerHTML='';
+            getData();
+            $("#Tstructure li").removeClass("selected");
+            _this.parentNode.className='selected'
+        }
+        function xxlxFn(_this,num){
+            message_type = num;
+            document.getElementById('content').innerHTML='';
+            $("#destoon_select").val(message_type)
+            getData();
+            $("#Txxlx li").removeClass("selected");
+            _this.parentNode.className=' xxlxda selected'
+        }
+
+        function getMore() {
+            numberPage++;
+            getData()
+        }
+        function getData() {
+            $.ajax({
+                url:'http://ceshi.hdjincheng.cn/ShangPu/ShopsList',
+                type:'POST',
+                dataType: "json",
+                data:{
+                    page:numberPage,
+                    city_id:area,
+                    sort_id:sort_id,
+                    sorter_id:sorter_id,
+                    types_id:types_id,
+                    money:money,
+                    money2:money2,
+                    acreage:acreage,
+                    acreage2:acreage2,
+                    message_type:message_type,
+                    title:$("#destoon_kw").val()
+                },
+                success:function (data) {
+                    // document.getElementById('content').innerHTML='';
+                    for(var i=0;i<data.list_shops.length;i++){
+                        document.getElementById('content').innerHTML+="<div class=\"list\" id=\"item_"+(i+1)+"\">\n" +
+                            "                <table>\n" +
+                            "                    <tr align=\"center\">\n" +
+                            "                        <td width=\"105\" align=\"left\" class='isImg'>\n" +
+                            "                            <div><a href=\"neirong.html?id="+data.list_shops[i].id+"\" target=\"_blank\"><img\n" +
+                            "                                    src=\"http://ceshi.hdjincheng.cn/ShangPu/upload/"+data.list_shops[i].images+"\" width=\"104\" height=\"78\"\n" +
+                            "                                    alt=\"\"+data.list_shops[i].title+\"\" onmouseover=\"img_tip(this, this.src);\"\n" +
+                            "                                    onmouseout=\"img_tip(this, '');\"/></a></div>\n" +
+                            "                        </td>\n" +
+                            "                        <td width=\"10\"></td>\n" +
+                            "                        <td align=\"left\">\n" +
+                            "                            <ul>\n" +
+                            "                                <li><a href=\"neirong.html?id="+data.list_shops[i].id+"\" target=\"_blank\"><strong\n" +
+                            "                                        class=\"px14\">"+data.list_shops[i].title+"</strong></a></li>\n" +
+                            "                                <li class=\"f_gray\">"+data.list_shops[i].types_id+"&nbsp;&nbsp;&nbsp;"+data.list_shops[i].acreage+"㎡</li>\n" +
+                            "                                <li class=\"f_gray\">&nbsp;"+data.list_shops[i].address+"</li>\n" +
+                            "                            </ul>\n" +
+                            "                        </td>\n" +
+                            "                        <td width=\"10\"></td>\n" +
+                            "                        <td width=\"150\">\n" +
+                            "                            <span class=\"f_red\"><strong class=\"px30\">"+data.list_shops[i].money+"</strong></span>\n" +
+                            "                            <span class=\"f_gray px20\">转让费："+data.list_shops[i].transferfee+"</span>\n" +
+                            "                        </td>\n" +
+                            "                        <td width=\"50\">\n" +
+                            "                            <span class=\"f_gray\">"+data.list_shops[i].adddate+"</span>\n" +
+                            "                        </td>\n" +
+                            "                    </tr>\n" +
+                            "                </table>\n" +
+                            "            </div>"
+                    }
+                    if(message_type=="求店求租"){
+                        var imgList = document.getElementsByClassName('isImg')
+                        for(var i=0;i<imgList.length;i++){
+                            imgList[i].style.display="none"
+                        }
+                    }
+
+                }
+            })
+        }
+
+
+    </script>
+
+    <script type="text/javascript" src="static/js/slide.js"></script>
+    <div id="slide_a14" class="slide" style="width:1200px;height:150px;">
+       <!-- <a href="http://www.58tongpu.com" target="_blank"><img src="static/picture/180010371.jpg" width="1200" height="150" alt=""/></a>
+        <a href="http://www.58tongpu.com" target="_blank"><img src="static/picture/180018531.jpg" width="1200" height="150" alt=""/></a>-->
+    </div>
+    <!--<script type="text/javascript">new dslide('slide_a14');</script>-->
+
+    <div class="c_b"></div>
+</div>
+
+<div class="sengyizr">
+    <div class="sengyizr-dh"><span class="f_l">邯郸商铺信息</span>
+        <p class="f_r">房源推广请拨打：4006401189</p></div>
+    <div class="sengyizr-nr">
+        <div class="sengyizr-nr-lb f_l" id="content">
+            <!--<div class="list" id="item_1">
+                <table>
+                    <tr align="center">
+                        <td width="105" align="left">
+                            <div><a href="http://www.58tongpu.com/Business/show.php?itemid=1" target="_blank"><img
+                                    src="static/picture/114328151.jpg.thumb.jpg" width="104" height="78"
+                                    alt="中心医院附近临街超市 可住可营业稳定客源接手可营业" onmouseover="img_tip(this, this.src);"
+                                    onmouseout="img_tip(this, '');"/></a></div>
+                        </td>
+                        <td width="10"></td>
+                        <td align="left">
+                            <ul>
+                                <li><a href="http://www.58tongpu.com/Business/show.php?itemid=1" target="_blank"><strong
+                                        class="px14">中心医院附近临街超市 可住可营业稳定客源接手可营业</strong></a></li>
+                                <li class="f_gray">商业街商铺&nbsp;&nbsp;&nbsp;150㎡</li>
+                                <li class="f_gray">河北-邯郸市-丛台-万达商场&nbsp;富奥商城3道201</li>
+                            </ul>
+                        </td>
+                        <td width="10"></td>
+                        <td width="150">
+                            <span class="f_red"><strong class="px30">面议</strong></span>
+                            <span class="f_gray px20">转让费：面议</span>
+                        </td>
+                        <td width="50">
+                            <span class="f_gray">07-09</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="list" id="item_2">
+                <table>
+                    <tr align="center">
+                        <td width="105" align="left">
+                            <div><a href="http://www.58tongpu.com/Business/show.php?itemid=2" target="_blank"><img
+                                    src="static/picture/160413581.jpg.thumb.jpg" width="104" height="78"
+                                    alt="光华大街先锋路西营业中餐馆转让（全城商铺网免费介绍" onmouseover="img_tip(this, this.src);"
+                                    onmouseout="img_tip(this, '');"/></a></div>
+                        </td>
+                        <td width="10"></td>
+                        <td align="left">
+                            <ul>
+                                <li><a href="http://www.58tongpu.com/Business/show.php?itemid=2" target="_blank"><strong
+                                        class="px14">光华大街先锋路西营业中餐馆转让（全城商铺网免费介绍</strong></a></li>
+                                <li class="f_gray">商业街商铺&nbsp;&nbsp;&nbsp;150㎡</li>
+                                <li class="f_gray">河北-邯郸市-复兴-光华街&nbsp;光华大街先锋路西150米路北</li>
+                            </ul>
+                        </td>
+                        <td width="10"></td>
+                        <td width="150">
+                            <span class="f_red px14"><strong class="px30">4000</strong>元/月</span>
+                            <span class="f_gray px20">转让费：面议</span>
+                        </td>
+                        <td width="50">
+                            <span class="f_gray">07-09</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="list" id="item_3">
+                <table>
+                    <tr align="center">
+                        <td width="105" align="left">
+                            <div><a href="http://www.58tongpu.com/Business/show.php?itemid=3" target="_blank"><img
+                                    src="static/picture/095135781.jpg.thumb.jpg" width="104" height="78" alt="美容院转让"
+                                    onmouseover="img_tip(this, this.src);" onmouseout="img_tip(this, '');"/></a></div>
+                        </td>
+                        <td width="10"></td>
+                        <td align="left">
+                            <ul>
+                                <li><a href="http://www.58tongpu.com/Business/show.php?itemid=3" target="_blank"><strong
+                                        class="px14">美容院转让</strong></a></li>
+                                <li class="f_gray">商业街商铺&nbsp;&nbsp;&nbsp;88㎡</li>
+                                <li class="f_gray">河北-邯郸市-邯山-火车站&nbsp;110号</li>
+                            </ul>
+                        </td>
+                        <td width="10"></td>
+                        <td width="150">
+                            <span class="f_red"><strong class="px30">面议</strong></span>
+                            <span class="f_gray px20">转让费：面议</span>
+                        </td>
+                        <td width="50">
+                            <span class="f_gray">07-09</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="list" id="item_4">
+                <table>
+                    <tr align="center">
+                        <td width="105" align="left">
+                            <div><a href="http://www.58tongpu.com/Business/show.php?itemid=4" target="_blank"><img
+                                    src="static/picture/150826633.jpg.thumb.jpg" width="104" height="78" alt="水电费水电费水电费"
+                                    onmouseover="img_tip(this, this.src);" onmouseout="img_tip(this, '');"/></a></div>
+                        </td>
+                        <td width="10"></td>
+                        <td align="left">
+                            <ul>
+                                <li><a href="http://www.58tongpu.com/Business/show.php?itemid=4" target="_blank"><strong
+                                        class="px14">水电费水电费水电费</strong></a></li>
+                                <li class="f_gray">商业街商铺&nbsp;&nbsp;&nbsp;199㎡</li>
+                                <li class="f_gray">河北-邯郸市&nbsp;邯郸市旺角商业广场B做1008</li>
+                            </ul>
+                        </td>
+                        <td width="10"></td>
+                        <td width="150">
+                            <span class="f_red"><strong class="px30">面议</strong></span>
+                            <span class="f_gray px20">转让费：面议</span>
+                        </td>
+                        <td width="50">
+                            <span class="f_gray">07-09</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>-->
+
+        </div>
+        <div class="sengyizr-nr-gg f_r" id="ade">
+            <img src="static/picture/165114901.jpg" width="160" height="100" alt=""/><img
+                src="static/picture/142624831.gif" width="160" height="100" alt=""/><img
+                src="static/picture/165139451.jpg" width="160" height="100" alt=""/><img
+                src="static/picture/165149201.jpg" width="160" height="160" alt=""/><img
+                src="static/picture/163753841.jpg" width="160" height="120" alt=""/><img
+                src="static/picture/142657721.jpg" width="160" height="200" alt=""/><img
+                src="static/picture/142530231.gif" width="160" height="100" alt=""/></div>
+    </div>
+    <div class="ckgdzr"><a href="javascript:;" target="_blank" onclick="getMore()">点击查看更多</a></div>
+</div>
+<div class="m b20" id="footb"></div>
+<div class="flink"><!--友情链接-->
+    <div class="flink-nr">
+        友情链接：
+        <a href="http://www.58tongpu.com" target="_blank">58同铺</a>
+    </div>
+</div>
+<div class="m">
+    <div class="foot">
+        <div id="copyright">(c)2008-2018 58同铺 SYSTEM All Rights Reserved</div>
+    </div>
+</div>
+<div class="back2top"><a href="javascript:void(0);" title="返回顶部">&nbsp;</a></div>
+<script type="text/javascript">
+    var destoon_userid = 0, destoon_username = '', destoon_message = 0, destoon_chat = 0, destoon_cart = get_cart(),
+        destoon_member = destoon_guest = '';
+    destoon_guest = '<img src="static/picture/ico-user.png" align="absmiddle"/><a href="login.html">会员登录</a> &nbsp;|&nbsp; <a href="register.html">免费注册</a> &nbsp;|&nbsp; <a href="http://www.58tongpu.com/member/send.php">忘记密码</a>';
+    destoon_member += destoon_guest;
+    $('#destoon_member').html(destoon_member);
+
+    $('#destoon_cart').html(destoon_cart > 0 ? '<strong>' + destoon_cart + '</strong>' : 0);
+</script>
+</body>
+</html>
